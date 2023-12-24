@@ -1,0 +1,95 @@
+.advantages {
+    padding: 150px 0;
+    color: #fff;
+    background: linear-gradient(0deg, #3C404D 50%, transparent 21%),linear-gradient(90deg, transparent 54%, #595b64 45%, #595b64 55%, transparent 55%, transparent 20%, #595b64 20%, #595b64 30%,transparent 30%);
+    background-size: 4em 2em;
+    background-color: #3C404D;
+    opacity: 1;
+    text-align: center;
+    animation-name: moveBg;
+    animation-duration: 15000ms;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    .scrolling & {
+        animation-play-state: running;
+    }
+    &__title {
+        margin-bottom: 2rem;
+    }
+    &__subtitle {
+        margin-bottom: var(--size-big);
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &__list {
+        gap: 80px 0;
+    }
+    @media screen and (max-width: 1199px) {
+        padding: 100px 0;
+    }
+
+    @media screen and (max-width: 991px) {
+        padding: 80px 0;
+        &__list {
+            gap: 4rem 0;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        padding: 60px 0;
+        &__list {
+            gap: 3rem 0;
+        }
+    }
+    @media screen and (max-width: 575px) {
+        padding: 40px 0;
+        &__list {
+            gap: 2rem 0;
+        }
+        &__title {
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+.advantage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 350px;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    &__icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background-color: #70DABA;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    &__title {
+        margin-bottom: 1rem;
+    }
+    &__text {
+        margin-bottom: 1rem;
+        opacity: 0.8;
+        flex-grow: 1;
+    }
+}
+
+@keyframes moveBg {
+    from {
+        background-position-y: 0%;
+    } to {
+        background-position-y: 100%;
+    }
+}

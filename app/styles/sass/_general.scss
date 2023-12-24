@@ -1,0 +1,400 @@
+// GENERAL PROJECT STYLES
+:root {
+    --primary-bg: #1D3668;
+    --size-big: 100px;
+
+    @media screen and (max-width: 1199px) {
+        --size-big: 4rem;
+    }
+    @media screen and (max-width: 767px) {
+        --size-big: 3rem;
+    }
+    @media screen and (max-width: 575px) {
+        --size-big: 2rem;
+    }
+}
+
+html {
+    font-size: 16px;
+}
+img {
+    max-width: 100%;
+}
+body {
+    margin: 0;
+    font-family: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 16px;
+    line-height: 1.4;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3rem;
+}
+h3 {
+    font-size: 2.5rem;
+}
+h4 {
+    font-size: 2rem;
+}
+h5 {
+    font-size: 1.5rem;
+}
+h6 {
+    font-size: 1.25rem;
+}
+@media screen and (max-width: 1199px) {
+    h1 {
+        font-size: 3.25rem;
+    }
+}
+@media screen and (max-width: 991px) {
+
+    h2 {
+        font-size: 2.75rem;
+    }
+    h3 {
+        font-size: 2.25rem;
+    }
+    h4 {
+        font-size: 1.75rem;
+    }
+    h5 {
+        font-size: 1.25rem;
+    } 
+    h6 {
+        font-size: 1.125rem;
+    }
+}
+@media screen and (max-width: 767px) {
+    h1 {
+        font-size: 3rem;
+    }
+    h2 {
+        font-size: 2.5rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    h4 {
+        font-size: 1.5rem;
+    }
+}
+@media screen and (max-width: 575px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+    h2 {
+        font-size: 2rem;
+    }
+    h3 {
+        font-size: 1.75rem;
+    }
+    h4 {
+        font-size: 1.25rem;
+    }
+    h5 {
+        font-size: 1.125rem;
+    } 
+    h6 {
+        font-size: 1rem;
+    }
+}
+
+.subtitle {
+    opacity: 0.8;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 32px;
+    font-weight: 700;
+    display: inline-block;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all 400ms;
+    &-primary {
+        background: linear-gradient(258deg, #A8FF34 12.84%, #70DABA 92.64%);
+        color: #000;
+        &:hover {
+            background: linear-gradient(258deg, #70DABA 12.84%, #A8FF34  92.64%);
+        }
+    }
+    &-transparent {
+        border: 1px solid currentColor;
+        color: inherit;
+        &:hover {
+            background-color: #70daba;
+            border: 1px solid #A8FF34;
+            color: #000;
+        }
+    }
+    &-white {
+        background-color: #fff;
+        border: 1px solid #fff;
+        color: #000;
+        &:hover {
+            background-color: #70daba;
+            border: 1px solid #A8FF34;
+            color: #000;
+        }
+    }
+}
+.pre-title {
+    color: #70DABA;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+
+.custom-bg {
+    background-color: var(--primary-bg);
+    position: relative;
+    color: #fff;
+    overflow: hidden;
+    &__inner {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: 1;
+    }
+    &__element {
+        position: absolute;
+        z-index: 1;
+        animation-name: customBgAnimation;
+        animation-duration: 4000ms;
+        animation-iteration-count: infinite;
+        animation-play-state: paused;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+        .scrolling & {
+            animation-play-state: running;
+        }
+        &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: 15px solid #fff;
+            border-radius: 100% 100% 100% 100%;
+            animation-duration: 4000ms;
+            animation-iteration-count: infinite;
+            animation-play-state: paused;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+            .scrolling & {
+                animation-play-state: running;
+            }
+        }
+
+
+        &--1 {
+            top: 0;
+            right: 50%;
+            height: 660px;
+            width: 500px;
+            &:before {
+                transform: rotate(-45deg) translate(-50%, -75%);
+                opacity: 0.15;
+                animation-name: colorFadeIn;
+            }
+            
+        }
+        &--2 {
+            &:before {
+                transform: rotate(25deg) translate(80%, -80%);
+                opacity: 0.15;
+                animation-name: colorFadeIn;
+            }
+            top: 50%;
+            left: 50%;
+            height: 660px;
+            width: 500px;
+
+        }
+        &--3 {
+            bottom: 0;
+            left: 50%;
+            width: 420px;
+            height: 260px;
+            &:before {
+                transform: rotate(25deg) translateY(75%);
+                animation-name: colorFadeOut;
+            }
+        }
+        &--4 {
+            top: 50%;
+            right: 50%;
+            height: 660px;
+            width: 500px;
+            &:before {
+                transform: rotate(25deg) translate(-130%, 0%);
+                opacity: 0.15;
+                animation-name: colorFadeIn;
+
+            }
+        }
+        &--5 {
+            &:before {
+                transform: rotate(25deg) translate(50%, -100%);
+                opacity: 0.15;
+                animation-name: colorFadeOut;
+            }
+            top: 0;
+            left: 50%;
+            height: 660px;
+            width: 500px;
+
+        }
+        &--6 {
+            bottom: 0;
+            left: 50%;
+            height: 600px;
+            width: 500px;
+            &:before {
+                transform: rotate(-25deg) translate(50%, 50%);
+                animation-name: colorFadeIn;
+            }
+        }
+        @media screen and (max-width: 1199px) {
+            &--1 {
+                &:before {
+                    transform: rotate(-45deg) translate(-50%, -50%);
+                }
+            }     
+            &--2 {
+                &:before {
+                    transform: rotate(25deg) translate(50%, -50%);
+                }
+            }     
+            &--3 {
+                &:before {
+
+                }
+            }     
+            &--4 {
+                &:before {
+                    transform: rotate(25deg) translate(-100%, -50%);
+                }
+            }     
+            &--5 {
+                &:before {
+                    transform: rotate(25deg) translate(25%, -75%);
+                }
+            }     
+            &--6 {
+                &:before {
+                    transform: rotate(-25deg) translate(0%, 50%);
+                }
+            }     
+        }
+        @media screen and (max-width: 991px) {
+            
+        }
+        @media screen and (max-width: 767px) {
+            &--1 {
+                height: 400px;
+                width: 300px;
+            }     
+            &--2 {
+                height: 400px;
+                width: 300px;
+            }       
+            &--4 {
+                height: 400px;
+                width: 300px;
+            }     
+            &--5 {
+                height: 400px;
+                width: 300px;
+            }     
+            &--6 {
+                height: 400px;
+                width: 300px;
+
+            }     
+        }
+        @media screen and (max-width: 575px) {
+            &--1 {
+                height: 300px;
+                width: 200px;
+            }     
+            &--2 {
+                height: 300px;
+                width: 200px;
+            }       
+            &--4 {
+                height: 300px;
+                width: 200px;
+            }     
+            &--5 {
+                height: 300px;
+                width: 200px;
+            }     
+            &--6 {
+                height: 300px;
+                width: 200px;
+
+            } 
+        }
+    }
+    &__content {    
+        position: relative;
+        z-index: 2;
+    }
+}
+@keyframes colorFadeIn {
+    from {
+        opacity: 0.05;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+@keyframes colorFadeOut {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 0.05;
+    }
+}
+
+
+
+@keyframes customBgAnimation {
+    from {
+        transform: rotate(0) scale(1);
+    }
+    to {
+        transform: rotate(25deg) scale(0.8);
+    }
+}
+
+input {
+    padding: 1rem;
+    color: inherit;
+    border-radius: 2rem;
+    border: 1px solid currentColor;
+    background-color: transparent;
+    display: inline-block;
+}
+.subscribe {
+    &__input {
+        width: 100%;
+        margin-bottom: 1.5rem;
+        &::placeholder {
+            color: inherit;
+        }
+    }
+    &__btn {
+        width: 100%;
+    }
+}

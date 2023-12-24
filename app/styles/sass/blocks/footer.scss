@@ -1,0 +1,81 @@
+.footer {
+    padding: 150px 0;
+
+    &__top {
+        padding-bottom: 100px;
+        margin-bottom: 100px;
+        border-bottom: 1px solid #345497;
+    }
+    &__bottom {
+        color: rgba($color: #fff, $alpha: 0.7);
+        font-size: 14px;
+    }
+    &__logo {
+        color: #fff;
+        margin-bottom: 1.5rem;
+    }
+    &__info {
+        &:not(:last-of-type) {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__navigation {
+        &-title {
+            font-size: 1rem;
+            color: #70DABA;
+            margin-bottom: 1.5rem;
+        }
+        .menu {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    }
+
+
+    @media screen and (max-width: 1199px) {
+        padding: 100px 0;
+    }
+
+    @media screen and (max-width: 991px) {
+        padding: 80px 0;
+        &__top {
+            padding-bottom: 80px;
+            margin-bottom: 80px;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        padding: 60px 0;
+        &__top {
+            padding-bottom: 60px;
+            margin-bottom: 60px;
+        }
+        &__navigation {
+            &:not(:last-of-type) {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        padding: 40px 0;
+        &__top {
+            padding-bottom: 40px;
+            margin-bottom: 40px;
+        }
+        &__navigation {
+            .menu {
+                li:not(:last-of-type) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        &__info {
+            &:not(:last-of-type) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
