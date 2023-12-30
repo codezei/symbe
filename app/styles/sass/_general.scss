@@ -26,10 +26,12 @@ body {
     font-size: 16px;
     line-height: 1.4;
     overflow-x: hidden;
+    color: #000;
 }
 
 h1 {
     font-size: 4rem;
+    line-height: 1.15;
 }
 h2 {
     font-size: 3rem;
@@ -45,6 +47,10 @@ h5 {
 }
 h6 {
     font-size: 1.25rem;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: inherit;
 }
 @media screen and (max-width: 1199px) {
     h1 {
@@ -203,7 +209,7 @@ h6 {
             &:before {
                 transform: rotate(-45deg) translate(-50%, -75%);
                 opacity: 0.15;
-                animation-name: colorFadeIn;
+                // animation-name: colorFadeIn;
             }
             
         }
@@ -211,7 +217,7 @@ h6 {
             &:before {
                 transform: rotate(25deg) translate(80%, -80%);
                 opacity: 0.15;
-                animation-name: colorFadeIn;
+                // animation-name: colorFadeIn;
             }
             top: 50%;
             left: 50%;
@@ -274,11 +280,11 @@ h6 {
                     transform: rotate(25deg) translate(50%, -50%);
                 }
             }     
-            &--3 {
-                &:before {
+            // &--3 {
+            //     &:before {
 
-                }
-            }     
+            //     }
+            // }     
             &--4 {
                 &:before {
                     transform: rotate(25deg) translate(-100%, -50%);

@@ -26,9 +26,20 @@
         }
         &-title {
             margin-bottom: 1rem;
+            color: #09080D;
         }
         &-text {
             margin-bottom: 2rem;
+            font-size: 1.25em;
+            color: #000;
+        }
+        &-btn {
+            border: 1px solid #C3CCE0;
+            color: #1D3668;
+            &:hover {
+                background-color: #C3CCE0;
+                border: 1px solid #C3CCE0;
+            }
         }
         
     }
