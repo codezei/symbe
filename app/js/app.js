@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		mobile: true,
 		live: true}).init()
 
-		scrollState()
+		// scrollState()
 		mobMenuToggle()
 		stickyHeader()
 })
@@ -62,6 +62,6 @@ document.addEventListener("scroll", function() {
         console.log("Scrolling stopped");
         isScrolling = false;
 		document.body.classList.remove('scrolling')
-    }, 200); // Подстройте этот интервал под ваши потребности
+    }, 200);
 });
 }
