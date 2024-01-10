@@ -221,6 +221,9 @@
         width: 100%;
     }
 
+    .menu-title {
+        font-size: 1.125rem;
+    }
 
     .menu-item-has-children {
         position: relative;
@@ -274,8 +277,10 @@
             box-shadow: 0px 23px 30px 0px rgba(0, 0, 0, 0.06);
             border-radius: 16px;
             padding: 1rem;
+            width: 280px;
             a {
                 padding: 0;
+                font-weight: 600;
             }
             .sticky &, .active & {
                 background: inherit;
@@ -284,6 +289,9 @@
             li:not(:last-child) {
                 margin-bottom: 1rem;
             }
+            .menu-item-description {
+                color: #1D3668;
+                }
         }
 
 
