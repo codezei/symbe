@@ -133,10 +133,25 @@ h1, h2, h3, h4, h5, h6 {
     &-transparent {
         border: 1px solid currentColor;
         color: inherit;
-        &:hover {
-            background-color: #8BD8BC;
-            border: 1px solid #BCFF5E;
-            color: #000;
+
+        &-blue {
+            border: 1px solid #1D3668;
+            color: #1D3668;
+            &:hover {
+                background-color: #1D3668;
+                border: 1px solid #1D3668;
+                color: #fff;
+            }
+
+        }
+        &-white {
+            color: #fff;
+            border: 1px solid #fff;
+            &:hover {
+                background-color: #fff;
+                border: 1px solid #fff;
+                color: #1D3668;
+            }
         }
     }
     &-white {
@@ -145,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
         color: #000;
         &:hover {
             background-color: #8BD8BC;
-            border: 1px solid #BCFF5E;
+            border: 1px solid #8BD8BC;
             color: #000;
         }
     }
@@ -343,5 +358,26 @@ input {
     }
     &__btn {
         width: 100%;
+    }
+}
+.text-center {
+    text-align: center;
+}
+
+.clip-img {
+    position: relative;
+    clip-path: ellipse(44% 49% at 50% 50%);
+
+    &--right {
+        transform: rotate(35deg);
+        img {
+            transform: rotate(-35deg);
+        }
+    }
+    &--left {
+        transform: rotate(-35deg);
+        img {
+            transform: rotate(35deg);
+        }
     }
 }

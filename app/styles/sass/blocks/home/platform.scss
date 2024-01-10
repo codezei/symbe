@@ -2,6 +2,10 @@
     padding: 80px 0;
     &__title {
         text-align: center;
+        margin-bottom: 1rem;
+    }
+    &__subtitle {
+        font-size: 2rem;
         margin-bottom: var(--size-big);
     }
 
@@ -33,14 +37,14 @@
             font-size: 1.25em;
             color: #000;
         }
-        &-btn {
-            border: 1px solid #C3CCE0;
-            color: #1D3668;
-            &:hover {
-                background-color: #C3CCE0;
-                border: 1px solid #C3CCE0;
-            }
-        }
+        // &-btn {
+        //     border: 1px solid #C3CCE0;
+        //     color: #1D3668;
+        //     &:hover {
+        //         background-color: #C3CCE0;
+        //         border: 1px solid #C3CCE0;
+        //     }
+        // }
         
     }
 
@@ -54,6 +58,9 @@
                 margin-bottom: 2rem;
             }
         }
+        &__subtitle {
+            font-size: 1.5rem;
+        }
     }
     @media screen and (max-width: 767px) {
         padding: 60px 0;
@@ -62,6 +69,9 @@
                 margin-bottom: 3rem;
                 padding-bottom: 3rem;
             }
+        }
+        &__subtitle {
+            font-size: 1rem;
         }
     }
     @media screen and (max-width: 575px) {
