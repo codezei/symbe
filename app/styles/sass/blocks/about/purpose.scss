@@ -1,0 +1,20 @@
+.purpose {
+    background-color: #F5F8FF;
+    &__title {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    &__content {
+        font-size: 1.5rem;
+        color: rgba($color: #000000, $alpha: 0.7);
+        *:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    @media screen and (max-width: 575px) {
+        &__content {
+            font-size: 1rem;
+        }
+    }
+}

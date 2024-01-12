@@ -1,18 +1,47 @@
 .intro {
     padding: 250px 0 150px;
+    @media screen and (min-height: 856px) and (min-width: 1220px) {
+        min-height: 856px;
+    }
     &__title {
         margin-bottom: 1.5rem;
     }
     &__subtitle {
-        margin-bottom: 56px;
+        margin-bottom: 1rem;
         font-size: 1.5rem;
+    }
+
+    &__description {
+        background-color: #fff;
+        padding: 2rem;
+        border-radius: 2rem;
+        color: #040815;
+        max-width: 340px;
+        width: 100%;
+        margin-left: -50px;
+        position: relative;
+        z-index: 1;
+        &-text {
+            margin-bottom: 0.5rem;
+            font-size: 1.1em;
+        }
+        &-post {
+            opacity: 0.5;
+
+        }
+    }
+    &__btn {
+        margin-top: 56px;
+        display: block;
+        max-width: 140px;
+        text-align: center;
     }
 
 
     @media screen and (max-width: 991px) {
         padding: 200px 0 100px;
-        &__subtitle {
-            margin-bottom: 1.5rem;
+        &__btn {
+            margin-top: 1.5rem;
         }
     }
     @media screen and (max-width: 767px) {
@@ -22,8 +51,11 @@
         &__title {
             margin-bottom: 1rem;
         }
+        &__btn {
+            margin-top: 1rem;
+            
+        }
         &__subtitle {
-            margin-bottom: 1rem;
             font-size: 1rem;
         }
         padding: 150px 0 50px;

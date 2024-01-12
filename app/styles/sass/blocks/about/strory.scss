@@ -1,0 +1,16 @@
+.story {
+    &__title {
+        text-align: center;
+        margin-bottom: var(--size-medium);
+    }
+    &__img {
+        margin-bottom: var(--size-big);
+        img {
+            border-radius: 2rem;
+        }
+    }
+    &__content {
+        font-size: 1.25rem;
+        color: rgba($color: #000000, $alpha: 0.7);
+    }
+}
