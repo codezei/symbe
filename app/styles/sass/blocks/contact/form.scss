@@ -13,6 +13,9 @@
     button {
         width: 100%;
     }
+    .row {
+        gap: 0 !important;
+    }
 
     input, textarea {
         font-size: 12px;
@@ -25,6 +28,8 @@
     }
     textarea {
         resize: none;
+        max-height: 100px;
+        overflow-y: auto;
     }
     label {
         color: #7C7C7C;
