@@ -21,6 +21,19 @@
 html {
     font-size: 16px;
 }
+.row>* {
+    margin-top: 30px;
+}
+
+@supports (gap: 30px) {
+    .row {
+        gap: 30px 0;
+    }
+
+    .row>* {
+        margin-top: 0;
+    }
+}
 img {
     max-width: 100%;
 }
@@ -39,9 +52,11 @@ h1 {
 }
 h2 {
     font-size: 3rem;
+    line-height: 1.2;
 }
 h3 {
     font-size: 2.5rem;
+    line-height: 1.2;
 }
 h4 {
     font-size: 2rem;
@@ -116,6 +131,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .subtitle {
     opacity: 0.8;
+    font-weight: 500;
 }
 
 .btn {
@@ -387,8 +403,32 @@ input {
 }
 .block {
     padding: 120px 0;
+    @media screen and (max-width: 1219px) {
+        padding: 100px 0;
+    }
+    @media screen and (max-width: 991px) {
+        padding: 80px 0;
+    }
+    @media screen and (max-width: 767px) {
+        padding: 60px 0;
+    }
+    @media screen and (max-width: 575px) {
+        padding: 40px 0;
+    }
 }
-
+.sign {
+    font-family: 'Dynalight';
+    font-size: 60px;
+    @media screen and (max-width: 991px) {
+        font-size: 3rem;
+    }
+    @media screen and (max-width: 767px) {
+        font-size: 2.5rem;
+    }
+    @media screen and (max-width: 575px) {
+        font-size: 2rem;
+    }
+}
 .wave {
     background-color: #1D3668;
     color: #fff;
@@ -404,9 +444,6 @@ input {
         z-index: -1;
     }
 
-    &--home {
-
-    }
     &--home &-element {
         &:nth-of-type(1) {
             height: 663px;
@@ -451,6 +488,34 @@ input {
         &:nth-of-type(2) {
             height: 663px;
             width: 820px;
+            top: 100%;
+            left: 50%;
+            opacity: 0.15;
+            border-radius: 50% 100%;
+        }
+        &:nth-of-type(3) {
+            height: 423px;
+            width: 846px;
+            top: 100%;
+            right: calc(100% - 100px);
+            border-radius: 100% 100% 100% 50%;
+            transform: rotate(-15deg);
+        }
+    }
+    &--about &-element {
+        &:nth-of-type(1) {
+            height: 875px;
+            width: 1080px;
+            bottom: 100%;
+            left: 50%;
+            opacity: 0.15;
+            border-radius: 50% 100% 50% 100%;
+            transform: translate(-50%, 0%) rotate(10deg);
+        }
+
+        &:nth-of-type(2) {
+            height: 820px;
+            width: 663px;
             top: 100%;
             left: 50%;
             opacity: 0.15;
@@ -555,6 +620,58 @@ input {
             border-radius: 50% 100%;
             // transform:  rotate(-25deg);
         }
+    }
+    &--founders &-element {
+        &:nth-of-type(1) {
+            height: 875px;
+            width: 1080px;
+            bottom: 100%;
+            left: 50%;
+            opacity: 0.15;
+            border-radius: 75% 100%;
+            transform: translate(-50%, 25%);
+        }
+
+        &:nth-of-type(2) {
+            height: 663px;
+            width: 820px;
+            top: 100%;
+            left: 50%;
+            opacity: 0.15;
+            border-radius: 50% 100%;
+            transform: translate(0, -25%);
+        }
+        &:nth-of-type(3) {
+            height: 423px;
+            width: 846px;
+            top: 100%;
+            right: calc(100% - 100px);
+            border-radius: 100% 100% 100% 50%;
+            transform: rotate(-15deg);
+            opacity: 0.15;
+        }
+    }
+    &--contact &-element {
+        &:nth-of-type(1) {
+            height: 1075px;
+            width: 1080px;
+            bottom: 100%;
+            left: 50%;
+            opacity: 0.15;
+            border-radius: 50% 100%;
+            transform: translate(-50%, 25%);
+        }
+
+        &:nth-of-type(2) {
+            height: 863px;
+            width: 820px;
+            top: 100%;
+            left: 50%;
+            opacity: 0.15;
+            border-radius: 50% 100%;
+            transform: translate(0, -25%);
+        }
+
     }
 
 }

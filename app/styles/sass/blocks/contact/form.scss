@@ -1,0 +1,42 @@
+.form {
+    background-color: #F2F6F9;
+    padding: 3rem 2rem;
+    border-radius: 2rem;
+    &__col {
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+    input:not([type="checkbox"], [type="radio"]), textarea {
+        width: 100%;
+    }
+    button {
+        width: 100%;
+    }
+
+    input, textarea {
+        font-size: 12px;
+        background-color: #fff;
+        border: 1px solid #C3CCE0;
+        padding: 1.125rem 1.5rem;
+        color: #000;
+        display: inline-block;
+        border-radius: 1rem;
+    }
+    textarea {
+        resize: none;
+    }
+    label {
+        color: #7C7C7C;
+        font-size: 12px;
+        margin-bottom: 0.25rem;
+        &:has(input[type="checkbox"]) {
+            font-size: 14px;
+            color: rgba($color: #000000, $alpha: 0.7);
+            input {
+                vertical-align: middle;
+                margin-right: 8px;
+            }
+        }
+    }
+}

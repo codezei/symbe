@@ -1,0 +1,35 @@
+.brand-name {
+    background-color: #F5F8FF;
+    &__title {
+        margin-bottom: var(--size-medium);
+    }
+    &__logo {
+        margin-bottom: var(--size-medium);
+       img {
+        max-width: 50%;
+       }
+    }
+    &__text {
+        color: #233565;
+        font-size: 2rem;
+        font-style: italic;
+        font-weight: 500;
+    }
+    @media screen and (max-width: 991px) {
+        &__text {
+            font-size: 1.5rem;
+        }
+    }
+    @media screen and (max-width: 767px) {
+        &__text {
+            font-size: 1.25rem;
+        }
+
+    }
+
+    @media screen and (max-width: 575px) {
+        &__text {
+            font-size: 1.125rem;
+        }
+    }
+}
