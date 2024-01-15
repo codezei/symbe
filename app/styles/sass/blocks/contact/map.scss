@@ -1,9 +1,5 @@
 .map {
-    &__iframe {
-        border: none;
-        display: block;
-        width: 100%;
-        aspect-ratio: 16/9;
-        min-height: 640px;
+    &__img {
+        text-align: center;
     }
 }

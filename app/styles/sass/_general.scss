@@ -442,6 +442,7 @@ input {
         display: block;
         border: 15px solid #fff;
         z-index: -1;
+        pointer-events: none;
     }
 
     &--home &-element {
